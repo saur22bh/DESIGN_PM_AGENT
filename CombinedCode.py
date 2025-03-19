@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 from langchain_anthropic import ChatAnthropic
-llm = ChatOllama(model='llama3.2')
+
 
 llm = ChatAnthropic(model='claude-3-7-sonnet-20250219',
 default_headers={
@@ -51,71 +51,3 @@ CombinedCodePromptTemplate = PromptTemplate(template=prompt,input_variables=['Fe
 
 
 CombinedCodeProcess = CombinedCodePromptTemplate|llm|parser 
-description = '''
-Here's a description of the new feature, tailored to a one-page mobile webpage with a scrollable interaction model:
-
-**Feature Name:** Fitness Journey Companion
-
-**Tagline:** Track your progress, stay motivated, and connect with like-minded individuals.
-
-**Description:**
-Find inspiration and motivation on your fitness journey with our companion app. Get personalized quotes, track your workouts, and reflect on your progress in one easy-to-use interface.
-
-**How it Works:**
-
-1. **Workout Journal**: Log your workouts, note improvements, and set reminders for upcoming sessions.
-2. **Daily Motivation**: Receive daily motivational quotes tailored to your fitness goals or current workout.
-3. **Progress Tracking**: View your progress over time, including workouts completed, miles ran, or weight lifted.
-
-**Content:**
-
-* A scrollable timeline showcasing your workouts, with the option to add notes and photos.
-* A section for daily motivational quotes, with a photo and a brief quote.
-* A section for tracking progress, showing your improvements and milestones achieved.
-* A call-to-action (CTA) button to connect with like-minded individuals through our Workout Buddy feature.
-
-**Design:**
-
-* Use a clean and modern design with a color scheme that evokes feelings of motivation and wellness (e.g., blues and greens).
-* Incorporate illustrations or graphics that represent fitness and motivation, such as running shoes, dumbbells, or inspirational quotes.
-* Use a scrollable interface to showcase the content in a continuous vertical flow, making it easy for users to navigate through their progress.
-
-**Interactions:**
-
-* When a user scrolls down the page, new content is revealed, creating a sense of discovery and exploration.
-* Clicking on a motivational quote opens a modal window with more information about the quote, such as its origin or meaning.
-* Connecting with Workout Buddies is done via a seamless integration, allowing users to share their progress and receive support from others.
-
-**Technical Requirements:**
-
-* Use a responsive design to ensure the app works perfectly on various screen sizes and devices.
-* Implement animations and transitions to enhance the user experience.
-).
-* Incorporate illustrations or graphics that represent fitness and motivation, such as running shoes, dumbbells, or inspirational quotes.
-* Use a scrollable interface to showcase the content in a continuous vertical flow, making it easy for users to navigate through their progress.
-
-**Interactions:**
-
-* When a user scrolls down the page, new content is revealed, creating a sense of discovery and exploration.
-* Clicking on a motivational quote opens a modal window with more information about the quote, such as its origin or meaning.
-* Connecting with Workout Buddies is done via a seamless integration, allowing users to share their progress and receive support from others.
-
-**Technical Requirements:**
-
-* Use a responsive design to ensure the app works perfectly on various screen sizes and devices.
-* Implement animations and transitions to enhance the user experience.
-**Interactions:**
-
-* When a user scrolls down the page, new content is revealed, creating a sense of discovery and exploration.
-* Clicking on a motivational quote opens a modal window with more information about the quote, such as its origin or meaning.
-* Connecting with Workout Buddies is done via a seamless integration, allowing users to share their progress and receive support from others.
-
-**Technical Requirements:**
-
-* Use a responsive design to ensure the app works perfectly on various screen sizes and devices.
-* Implement animations and transitions to enhance the user experience.
-* Implement animations and transitions to enhance the user experience.
-* Ensure the app is optimized for fast loading times and smooth scrolling.
-'''
-# response = CombinedCodeProcess.invoke({'Featuredescription':description})
-# print(response)
