@@ -1,9 +1,10 @@
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
-from langchain_ollama import ChatOllama
-from dotenv import load_dotenv
 
-load_dotenv()
+import os 
+import streamlit as st
+os.environ["ANTHROPIC_API_KEY"] = st.secrets["ANTHROPIC_API_KEY"]
+
 from langchain_anthropic import ChatAnthropic
 
 
