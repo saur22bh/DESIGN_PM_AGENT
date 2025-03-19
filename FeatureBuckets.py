@@ -1,9 +1,11 @@
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from langchain_ollama import ChatOllama
+
 
 from langchain_anthropic import ChatAnthropic
-llm = ChatOllama(model='llama3.2')
+import os 
+import streamlit as st
+os.environ["ANTHROPIC_API_KEY"] = st.secrets["ANTHROPIC_API_KEY"]
 
 llm = ChatAnthropic(model='claude-3-5-sonnet-20241022')
 
