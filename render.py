@@ -55,7 +55,7 @@ if 'CombinedFeatureDescription' not in st.session_state:
 if 'Code' not in st.session_state:
     st.session_state.Code = None
 
-UserInterest = st.text_input("Enter a user interest/topic/requirement based on which you would like me to generate product features and UI code")
+UserInterest = st.text_input("Enter a user interest/topic based on which you would like me to generate product features and UI code")
 
 st.markdown("""
     <style>
@@ -90,7 +90,7 @@ if st.session_state.output:
     st.title("Features Ranked")
     st.dataframe(df) 
 
-    if st.button('Code for Single Feature by Combining the 2-3 Features [ RECOMMENDED ]'):
+    if st.button('Tap to see code and feature description for a feature created by combining 2-3 features'):
         st.session_state.CombinedFeatureDescription = output['CombinedFeatureDescription']
         st.session_state.Code = output['Code']
 
