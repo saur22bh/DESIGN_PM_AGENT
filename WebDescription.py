@@ -1,11 +1,13 @@
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
-from langchain_ollama import ChatOllama
-from dotenv import load_dotenv
 
-load_dotenv()
+
 from langchain_anthropic import ChatAnthropic
-# llm = ChatOllama(model='llama3.2')
+
+import os 
+import streamlit as st
+os.environ["ANTHROPIC_API_KEY"] = st.secrets["ANTHROPIC_API_KEY"]
+
 llm = ChatAnthropic(model='claude-3-7-sonnet-20250219')
 prompt = '''
 Given the following product feature name and its brief description, generate a detailed UI description for a mobile-native webpage that is entirely dedicated to showcasing this feature. The UI should be modern, visually appealing, and designed for an intuitive user experience.*  
