@@ -5,9 +5,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 from langchain_anthropic import ChatAnthropic
-llm = ChatOllama(model='llama3.2')
 
-llm = ChatAnthropic(model='claude-3-5-sonnet-20241022',
+
+llm = ChatAnthropic(model='claude-3-7-sonnet-20250219',
 default_headers={
         "anthropic-beta": "max-tokens-3-5-sonnet-2024-07-15"
     },
