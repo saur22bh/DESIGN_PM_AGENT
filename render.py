@@ -41,7 +41,7 @@ from lsWidgetCode import lsWidgetCodeProcess
 import pandas as pd
 import streamlit as st
 
-st.title('Feature Ideation, UI code for SHP and LS Widgets')
+st.title('Topic/Interest -> Product Features Ideation -> Final FeatureDescription -> UI Code')
 
 # Store output in session state to persist it across reruns
 if 'output' not in st.session_state:
