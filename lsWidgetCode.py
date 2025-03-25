@@ -15,7 +15,7 @@ default_headers={
 
 prompt = '''
  Design a set of three visually striking and highly engaging mobile lock screen widgets in React using Tailwind CSS or HTML, serving as the primary entry point to a mobile based native website for which description is provided.
-The widgets should align with the website: {description}. They should come in three sizes—small (square), medium (small rectangle), and large (wide rectangle). Do include images if reqd. Each widget should be aesthetically compelling.
+The widgets should align with the website: {description}. They should come in three sizes—small 108x96 px, medium 212x96 px, and large 328x96 px. Do include images if reqd. Each widget should be aesthetically compelling.
 The goal is to create widgets so visually engaging that users feel compelled to click and explore the website further.
 Output Format:   
    -  Only return the code  as output and nothing else.  No explanations, comments, or instructions  should be included.   
